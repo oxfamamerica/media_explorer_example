@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/style.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+      
+
+</head>
+<body>
+    <header class="wrapper">
+        <h1>Demo blog</h1>
+    </header>
+    <div class="wrapper">
+        <div class="main">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="secondary">
+        </div>
+    </div>
+    <footer class="wrapper clear">
+        <p><a href="/">Home</a> | <a href="/admin/">Admin site</a> (User/pass: admin/admin)</p>
+    </footer>
+</body>
+</html> 

@@ -1,3 +1,5 @@
+media_explorer_example/static/media/
+*.db
 python
 *.sh
 
