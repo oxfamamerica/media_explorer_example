@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'media_explorer',
     'ckeditor',
 
+    'my_app',
+
 ]
 
 MIDDLEWARE_CLASSES = [

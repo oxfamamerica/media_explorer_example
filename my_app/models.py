@@ -18,3 +18,5 @@ class Blog(models.Model):
     #You will see a CKEditor WYSIWYG with DME plugin
     #NOTE: You cannot use more than one RichText field in a model
     entry = RichTextField()
+
+    published = models.BooleanField(default=False)
