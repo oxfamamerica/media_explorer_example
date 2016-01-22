@@ -1,5 +1,5 @@
 from django.contrib import admin
-from my_app.models import Blog
+from blog.models import Blog
 
 class BlogAdmin(admin.ModelAdmin):
     '''
