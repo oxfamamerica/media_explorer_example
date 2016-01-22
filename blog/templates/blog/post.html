@@ -1,42 +1,42 @@
 {% extends 'base.html' %}
 {% load media_explorer_tags %}
 
-{% block title %}{{blog.title}}{% endblock %}
+{% block title %}{{post.title}}{% endblock %}
 
 {% block content %}
     <article>
         <header>
-            <h1> {{blog.title}} </h1>
+            <h1> {{post.title}} </h1>
             <p class="posttime">
                 Posted on
-                <time datetime="{{blog.created|date:"c"}}">
-                {{blog.created|date}}
+                <time datetime="{{post.created|date:"c"}}">
+                {{post.created|date}}
                 </time>
             </p>
         </header>
 
 
-        {% if blog.lead_media.type == "video" %}
-            {% get_video blog.lead_media.id %}
-        {% elif blog.lead_media.type == "gallery" %}
-            {% get_media_gallery blog.lead_media.id %}
-        {% elif blog.lead_media.type == "image" %}
-            <img src="{% get_image_url_from_size blog.lead_media.id "1220x763" "1220x762" "orig_c"|safe %}" alt="">
-            {% if blog.lead_media.caption or blog.lead_media.credit %}
+        {% if post.lead_media.type == "video" %}
+            {% get_video post.lead_media.id %}
+        {% elif post.lead_media.type == "gallery" %}
+            {% get_media_gallery post.lead_media.id %}
+        {% elif post.lead_media.type == "image" %}
+            <img src="{% get_image_url_from_size post.lead_media.id "1220x763" "1220x762" "orig_c"|safe %}" alt="">
+            {% if post.lead_media.caption or post.lead_media.credit %}
             <figcaption>
-                {% if blog.lead_media.caption %}
-                    {{blog.lead_media.caption}}
+                {% if post.lead_media.caption %}
+                    {{post.lead_media.caption}}
                 {% endif %}
-                {% if blog.lead_media.credit %}
-                    {{blog.lead_media.credit}}
+                {% if post.lead_media.credit %}
+                    {{post.lead_media.credit}}
                 {% endif %}
             </figcaption>
             {% endif %}
         {% endif %}
 
-        {% get_video blog.video.id %}
+        {% get_video post.video.id %}
 
-        {{ blog.entry | show_short_code | safe}}
+        {{ post.entry | show_short_code | safe}}
     </article>
 {% endblock %}
 
