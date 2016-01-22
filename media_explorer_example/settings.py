@@ -133,4 +133,4 @@ try:
 except ImportError:
     pass
 
-#DME_RESIZE = False
+DME_RESIZE = False
