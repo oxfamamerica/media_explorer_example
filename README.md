@@ -4,7 +4,7 @@ This is the code for the example used in the Django Media Explorer [documentatio
 
 #Installation
 
-This was tested on Django 1.9
+This was tested on Django 1.8.8
 
 
 ```
