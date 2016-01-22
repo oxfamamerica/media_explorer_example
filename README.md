@@ -13,8 +13,8 @@ cd dme
 source bin/activate
 pip install django-media-explorer
 git clone https://github.com/oxfamamerica/media_explorer_example.git
-python manage.py makemigrations
-python manage.py migrate
+./bin/python manage.py makemigrations
+./bin/python manage.py migrate
 ./bin/python media_explorer_example/manage.py runserver
 ```
 
